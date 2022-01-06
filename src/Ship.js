@@ -4,6 +4,8 @@ export class Ship {
         this.ship = this.createShip();
     }
 
+
+    //Takes the lenght provided as a lenght and creates an array with as many indexes as the lenght, then asings a key value representing the health
     createShip() {
         let shipArray = [];
         let i = this.length;
@@ -24,6 +26,8 @@ export class Ship {
         return this.ship.length;
     }
 
+
+    //Takes an index and changes the key value representing the hit to true
     hit(index) {
         return (this.ship[index].hit = true);
     }
@@ -34,6 +38,7 @@ export class Ship {
         }
     }
 
+    //If every index has a key with a hit value = hit then returns true and changes the sink status to true
     isSunk() {
         if (this.ship.every(this.checkHit)) {
             return true;
