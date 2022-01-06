@@ -7,25 +7,26 @@
  * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
  */
 /******/ (() => { // webpackBootstrap
+/******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
+
+/***/ "./src/Ship.js":
+/*!*********************!*\
+  !*** ./src/Ship.js ***!
+  \*********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"Ship\": () => (/* binding */ Ship)\n/* harmony export */ });\nclass Ship {\n    constructor(length) {\n        this.length = length;\n        this.ship = this.createShip();\n    }\n\n    createShip() {\n        let shipArray = [];\n        let i = this.length;\n        while (i > 0) {\n            shipArray.push({\n                hit: false,\n            });\n            i--;\n        }\n        return shipArray;\n    }\n\n    getShip() {\n        return this.ship;\n    }\n\n    getShipLength() {\n        return this.ship.length;\n    }\n\n    hit(index) {\n        return (this.ship[index].hit = true);\n    }\n\n    checkHit(item) {\n        if (item.hit == true) {\n            return true;\n        }\n    }\n\n    isSunk() {\n        if (this.ship.every(this.checkHit)) {\n            return true;\n        }\n    }\n}\n\n\n//# sourceURL=webpack://battleship/./src/Ship.js?");
+
+/***/ }),
 
 /***/ "./src/index.js":
 /*!**********************!*\
   !*** ./src/index.js ***!
   \**********************/
-/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("const sum = __webpack_require__(/*! ./sum */ \"./src/sum.js\")\n\nconsole.log(sum(2, 3));\n\n//# sourceURL=webpack://battleship/./src/index.js?");
-
-/***/ }),
-
-/***/ "./src/sum.js":
-/*!********************!*\
-  !*** ./src/sum.js ***!
-  \********************/
-/***/ ((module) => {
-
-eval("function sum(a, b) {\n    return a + b;\n}\nmodule.exports = sum;\n\n\n//# sourceURL=webpack://battleship/./src/sum.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _Ship__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Ship */ \"./src/Ship.js\");\n\n\nlet carrier = new _Ship__WEBPACK_IMPORTED_MODULE_0__.Ship(5);\nconsole.log(carrier);\n\n\n//# sourceURL=webpack://battleship/./src/index.js?");
 
 /***/ })
 
@@ -54,6 +55,35 @@ eval("function sum(a, b) {\n    return a + b;\n}\nmodule.exports = sum;\n\n\n//#
 /******/ 		// Return the exports of the module
 /******/ 		return module.exports;
 /******/ 	}
+/******/ 	
+/************************************************************************/
+/******/ 	/* webpack/runtime/define property getters */
+/******/ 	(() => {
+/******/ 		// define getter functions for harmony exports
+/******/ 		__webpack_require__.d = (exports, definition) => {
+/******/ 			for(var key in definition) {
+/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 				}
+/******/ 			}
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
+/******/ 	(() => {
+/******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/make namespace object */
+/******/ 	(() => {
+/******/ 		// define __esModule on exports
+/******/ 		__webpack_require__.r = (exports) => {
+/******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 			}
+/******/ 			Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 		};
+/******/ 	})();
 /******/ 	
 /************************************************************************/
 /******/ 	

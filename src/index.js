@@ -1,3 +1,4 @@
-const sum = require("./sum")
+import { Ship } from "./Ship";
 
-console.log(sum(2, 3));
+let carrier = new Ship(5);
+console.log(carrier);
