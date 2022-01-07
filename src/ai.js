@@ -8,14 +8,11 @@ export class AI extends Player {
         this.enemyBoard = enemyBoard;
         this.attackArray = [];
     }
-
     generateRandomAttack() {
         //If it's the computer turn...
         if (this.checkTurn()) {
-            //Create an object representing the coordinates
             let numberObject = { x: undefined, y: undefined };
             while (true) {
-                //Create a random number between 0 and 10 and assign it to x and y
                 let firstNumber = Math.floor(Math.random() * 10);
                 let secondNumber = Math.floor(Math.random() * 10);
                 numberObject.x = firstNumber;
@@ -34,7 +31,6 @@ export class AI extends Player {
             }
         }
     }
-
     getAttackArray() {
         return this.attackArray;
     }

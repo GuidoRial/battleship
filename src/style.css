@@ -35,8 +35,9 @@ img {
 
 main {
     height: 100%;
-    background-color: aliceblue;
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .playerSide,
@@ -52,13 +53,13 @@ main {
 }
 .aiSide {
     width: 50%;
-    background-color: rgb(233, 240, 247);
+
     display: none;
 }
 
 .addShips {
     width: 50%;
-    background-color: rgb(233, 240, 247);
+
     display: flex;
     box-sizing: border-box;
     padding: 50px;
@@ -89,13 +90,13 @@ main {
     align-items: center;
 }
 .hit {
-    background-color: tomato;
+    background-color: #4787c2;
     color: #5a5a5a;
     font-size: large;
     font-weight: bold;
 }
 .occupied {
-    background-color: rgb(89, 179, 71);
+    background-color: #989fce;
 }
 .missed {
     background-color: lightblue;

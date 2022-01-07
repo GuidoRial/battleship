@@ -10,18 +10,14 @@ export class Ship {
         let shipArray = [];
         let i = this.length;
         while (i > 0) {
-            shipArray.push({
-                hit: false,
-            });
+            shipArray.push({ hit: false });
             i--;
         }
         return shipArray;
     }
-
     getShip() {
         return this.ship;
     }
-
     getShipLength() {
         return this.ship.length;
     }
@@ -31,10 +27,11 @@ export class Ship {
     hit(index) {
         return (this.ship[index].hit = true);
     }
-
     checkHit(item) {
         if (item.hit == true) {
             return true;
+        } else {
+            return false;
         }
     }
 
@@ -42,6 +39,8 @@ export class Ship {
     isSunk() {
         if (this.ship.every(this.checkHit)) {
             return true;
+        } else {
+            return false;
         }
     }
 }
