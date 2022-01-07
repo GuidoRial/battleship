@@ -83,9 +83,7 @@ describe("gameboard", () => {
     test("gameboard can check if every ship is sunk", () => {
         let board = new GameBoard();
         let admiral = new Ship(1);
-        let cat = new Ship(1);
         board.placeShip(admiral, 0, 0);
-        board.placeShip(cat, 3, 4);
         board.receiveAttack(0, 0);
         expect(board.checkIfAllShipSunk()).toBe(true);
     });
