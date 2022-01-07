@@ -1,7 +1,8 @@
 # Battleship game
+Unfinished, locally works fine, but deploying it breaks the code
 
 ## Live Preview
-
+https://guidorial.github.io/battleship/
 
 ## General Info
 A battleship game made as part of The Odin Project's curriculum
@@ -19,3 +20,4 @@ A battleship game made as part of The Odin Project's curriculum
     -  Gained further knowledge of classes, including how to make one extend the other
   *  Jest
     -  What to test and how to test it
+    -  Changed my coding style to one more test-driven
