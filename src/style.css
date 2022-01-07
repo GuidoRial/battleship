@@ -1,0 +1,210 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,500;1,700&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Open Sans";
+    color: black;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #4787c2;
+    padding: 15px;
+    font-size: 26px;
+    gap: 5px;
+}
+
+img {
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+main {
+    height: 100%;
+    background-color: aliceblue;
+    display: flex;
+}
+
+.playerSide,
+.aiSide {
+    width: 50%;
+    color: #989fce;
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.aiSide {
+    width: 50%;
+    background-color: rgb(233, 240, 247);
+    display: none;
+}
+
+.addShips {
+    width: 50%;
+    background-color: rgb(233, 240, 247);
+    display: flex;
+    box-sizing: border-box;
+    padding: 50px;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.block {
+    background-color: #989fce;
+    width: 50px;
+    height: 50px;
+    border: #5a5a5a solid 1px;
+}
+
+.playerBoard,
+.aiBoard {
+    width: 35vw;
+    height: 65vh;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+}
+
+.cell {
+    border: #5a5a5a solid 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hit {
+    background-color: tomato;
+    color: #5a5a5a;
+    font-size: large;
+    font-weight: bold;
+}
+.occupied {
+    background-color: rgb(89, 179, 71);
+}
+.missed {
+    background-color: lightblue;
+    color: #5a5a5a;
+    font-size: large;
+    font-weight: bold;
+}
+
+.modal {
+    display: block;
+    position: fixed;
+    z-index: 1;
+    padding-top: 50px;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+input {
+    padding: 10px;
+}
+
+#modalContent {
+    position: relative;
+    margin: auto;
+    background-color: #fefefe;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    box-sizing: border-box;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 30px;
+    border: 1px solid #888;
+    border-radius: 15px;
+    height: 30%;
+    width: 340px;
+    font-size: 20px;
+    color: indigo;
+    font-weight: bolder;
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+}
+
+@keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0;
+    }
+    to {
+        top: 0;
+        opacity: 1;
+    }
+}
+
+#modalContent p {
+    padding: 0;
+    margin: 0;
+}
+#nameInput {
+    width: 100%;
+    height: 40px;
+    font-size: 20px;
+    color: indigo;
+    margin-top: 14px;
+    border: #5a5a5a 2px solid;
+    border-radius: 7px;
+}
+#submitButton,
+#playAgainButton {
+    width: 200px;
+    height: 40px;
+    align-self: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    background-color: aliceblue;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+#endGameModal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    padding-top: 130px;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+}
+#endGameContent {
+    position: relative;
+    margin: auto;
+    background-color: #fefefe;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    box-sizing: border-box;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 30px;
+    border: 1px solid #888;
+    border-radius: 15px;
+    height: 30%;
+    width: 340px;
+    font-size: 23px;
+    color: indigo;
+    font-weight: bold;
+}
+#playAgainButton {
+    width: 150px;
+}

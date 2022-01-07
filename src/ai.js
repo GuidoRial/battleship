@@ -21,11 +21,7 @@ export class AI extends Player {
                 numberObject.x = firstNumber;
                 numberObject.y = secondNumber;
                 //If the AI didn't attack those coordinates already...
-                if (
-                    !this.attackArray.some(
-                        (e) => e.x == numberObject.x && e.y == numberObject.y
-                    )
-                ) { //...attack
+               if(!(this.attackArray.some(e => e.x == numberObject.x && e.y == numberObject.y))) { //...attack
                     this.attackArray.push(numberObject);
                     this.attack(
                         numberObject.x,

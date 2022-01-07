@@ -39,7 +39,7 @@ export class GameBoard {
         return this.gameBoardArray;
     }
 
-    chechIfShipPlacementIsValid(length, x, y) {
+    checkIfShipPlacementIsValid(length, x, y) {
         if (x > 10 || x < 0 || y > 10 || y < 0 || y + length > 10) {
             return false;
         } else {
@@ -53,7 +53,7 @@ export class GameBoard {
     }
 
     placeShip(ship, x, y) {
-        if (this.chechIfShipPlacementIsValid(ship.getShipLength(), x, y)) {
+        if (this.checkIfShipPlacementIsValid(ship.getShipLength(), x, y)) {
             for (let i = 0; i < ship.getShipLength(); i++) {
                 this.gameBoardArray[y + i][x].shipName = ship;
                 this.gameBoardArray[y + i][x].shipIndex = i;
@@ -76,16 +76,18 @@ export class GameBoard {
     }
 
     checkIfAllShipSunk() {
-        let key = true;
+        let key;
         this.gameBoardArray.forEach((item) => {
             item.forEach((element) => {
                 if (element.shipName) {
                     if (element.shipName.isSunk() == false) {
                         key = false;
+                    } else if (element.shipName.isSunk() == true) {
+                        key = true;
                     }
                 }
+                return key;
             });
         });
-        return key;
     }
 }

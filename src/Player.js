@@ -4,6 +4,10 @@ export class Player {
         this.turn = true;
     }
 
+    setName(name) {
+        this.name = name;
+    }
+
     getName() {
         return this.name;
     }
