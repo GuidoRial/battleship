@@ -1,5 +1,4 @@
 # Battleship game
-Unfinished, locally works fine, but deploying it breaks the code
 
 ## Live Preview
 https://guidorial.github.io/battleship/
