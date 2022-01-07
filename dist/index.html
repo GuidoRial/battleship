@@ -1,1 +1,84 @@
-<!doctype html><html lang="en"><head><meta charset="UTF-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>Battleship Game</title><script defer="defer" src="main.b334b561b8b08e8dc904.js"></script></head><body><header><h1>Battleship Game</h1></header><div class="modal"><form id="modalContent" novalidate><div class="nameContainer"><p>Enter your name:</p><input required value="" placeholder="Admiral" id="nameInput"/></div><input type="submit" value="Submit" id="submitButton"/></form></div><div id="endGameModal"><div id="endGameContent"><p id="winnerText">Placeholder is the Winner!!</p><input type="submit" value="Play Again" id="playAgainButton"/></div></div><main><div class="playerSide"><p id="playerName">Player Name's Board</p><div class="playerBoard"></div></div><div class="addShips"><div class="ship" id="battleship" draggable="true"><div class="block"></div><div class="block"></div><div class="block"></div><div class="block"></div></div><div class="ship" id="carrier" draggable="true"><div class="block"></div><div class="block"></div><div class="block"></div><div class="block"></div><div class="block"></div></div><div class="ship" id="submarine" draggable="true"><div class="block"></div><div class="block"></div><div class="block"></div></div><div class="ship" id="destroyer" draggable="true"><div class="block"></div><div class="block"></div><div class="block"></div></div><div class="ship" id="patrolboat" draggable="true"><div class="block"></div><div class="block"></div></div></div><div class="aiSide"><p>AI's Board</p><div class="aiBoard"></div></div></main><footer class="footer">Created by GuidoRial<div class="" id="imgContainer"></div></footer></body></html>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Battleship Game</title>
+    <script defer src="main.js"></script></head>
+    <body>
+        <header>
+            <h1>Battleship Game</h1>
+        </header>
+        <div class="modal">
+            <form id="modalContent" novalidate>
+                <div class="nameContainer">
+                    <p>Enter your name:</p>
+                    <input
+                        required
+                        type="text"
+                        value=""
+                        placeholder="Admiral"
+                        id="nameInput"
+                    />
+                </div>
+                <input type="submit" value="Submit" id="submitButton" />
+            </form>
+        </div>
+        <div id="endGameModal">
+                <div id="endGameContent">
+                    <p id="winnerText">Placeholder is the Winner!!</p>
+                    <input
+                        type="submit"
+                        value="Play Again"
+                        id="playAgainButton"
+                    />
+                </div>
+            </div>
+        <main>
+            <div class="playerSide">
+                <p id="playerName">Player Name's Board</p>
+                <div class="playerBoard"></div>
+            </div>
+            <div  class="addShips">
+                <div class="ship" id="battleship" draggable="true">
+                    <div class="block"></div>
+                    <div class="block"></div>
+                    <div class="block"></div>
+                    <div class="block"></div>
+                </div>    
+                <div class="ship" id="carrier" draggable="true">
+                    <div class="block"></div>
+                    <div class="block"></div>
+                    <div class="block"></div>
+                    <div class="block"></div>
+                    <div class="block"></div>
+                </div>
+                <div class="ship" id="submarine" draggable="true">
+                    <div class="block"></div>
+                    <div class="block"></div>
+                    <div class="block"></div>
+                </div>
+                <div class="ship" id="destroyer" draggable="true">
+                    <div class="block"></div>
+                    <div class="block"></div>
+                    <div class="block"></div>
+                </div>
+                <div class="ship" id="patrolboat" draggable="true">
+                    <div class="block"></div>
+                    <div class="block"></div>
+                </div>
+            </div>
+            <div class="aiSide">
+            <p>AI's Board</p>
+            <div class="aiBoard"></div>
+            </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            Created by GuidoRial
+            <div class="" id="imgContainer"></div>
+        </footer>
+    </body>
+</html>
